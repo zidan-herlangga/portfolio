@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/responsive.css" />
+
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Portfolio | Zidan Herlangga</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo">Portfolio</a>
+
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <i class="fa-solid fa-bars" id="menu-icon"></i>
+    </header>
+
+    <!-- Elemen modal -->
+    <div id="menuModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <a href="#home" class="menu-item">Home</a>
+        <a href="#about" class="menu-item">About</a>
+        <a href="#services" class="menu-item">Services</a>
+        <a href="#contact" class="menu-item">Contact</a>
+      </div>
+    </div>
+
+    <!-- Tombol untuk membuka modal -->
+    <div id="menu-icon">☰</div>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+      <div class="home-content">
+        <h3>Hi, Myself!</h3>
+        <h1>Zidan Herlangga</h1>
+        <h3>And I'am <span>Fullstack Developer</span></h3>
+        <div class="social-media">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <a href="" download="Zidan Herlangga CV.pdf" class="btn">Download CV</a>
+      </div>
+
+      <div class="home-img">
+        <img src="assets/zidan-bgblue.jpg" />
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="about-content">
+        <h2>About Me</h2>
+        <p>
+          Hi there! I'm Zidan Herlangga, a passionate and creative frontend
+          developer based in Bekasi, Indonesian. With a strong background in web
+          design and development, I bring ideas to life through clean and
+          efficient code. My goal is to create engaging and user-friendly
+          experiences on the web.
+        </p>
+        <br />
+        <p>
+          Outside of coding, you can find me exploring new technologies,
+          attending tech meetups, or enjoying a good cup of coffee while
+          brainstorming the next innovative project. Let's connect and bring
+          your ideas to the digital world!
+        </p>
+        <img src="path/to/profile-picture.jpg" alt="Your Profile Picture" />
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+      <div class="services-content">
+        <h2>Services</h2>
+        <ul>
+          <li>Web Design</li>
+          <li>Frontend Development</li>
+          <li>Responsive Design</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+      <div class="portfolio-content">
+        <h2>Portfolio</h2>
+        <!-- Your portfolio items go here -->
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <div class="contact-content">
+        <h2>Contact Me</h2>
+        <form method="POST" action="" id="contact-form">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" name="submit" class="btn">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <script src="javascript/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
