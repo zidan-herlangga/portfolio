@@ -1,7 +1,12 @@
 <?php
 
 // Menghubungkan ke Database
-$conn = new mysqli("localhost", "id20676677_zidan", "Db_portfolio1", "id20676677_portfolio");
+$server = "localhost";
+$nameserver = "root";
+$passwordserver = "";
+$database = "YOUR DATABASE"; //Insert your database
+
+$conn = new mysqli($server, $nameserver, $passwordserver, $database);
 
 if($conn->connect_error){
     echo "Connected Failed!";
