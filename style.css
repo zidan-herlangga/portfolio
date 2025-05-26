@@ -1,0 +1,95 @@
+:root {
+  --bg-primary: #282c34;
+  --bg-secondary: #21252b;
+  --accent: #528bff;
+  --text-primary: #abb2bf;
+  --text-secondary: #828997;
+  --purple: #c678dd;
+  --green: #98c379;
+  --red: #e06c75;
+  --yellow: #e5c07b;
+  --cyan: #56b6c2;
+}
+
+/* Custom scrollbar styling */
+.json-container::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.json-container::-webkit-scrollbar-track {
+  background: #252526;
+  border-radius: 3px;
+}
+
+.json-container::-webkit-scrollbar-thumb {
+  background: #3e3e42;
+  border-radius: 3px;
+}
+
+.json-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+  background-color: var(--bg-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+  background-color: var(--accent);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #3d7ad6;
+  transform: translateY(-2px);
+}
+
+.tag {
+  background-color: rgba(82, 139, 255, 0.2);
+  color: var(--accent);
+}
+
+/* GitHub Calendar Styling */
+.calendar {
+  width: 100%;
+  border: none !important;
+}
+
+.contrib-number {
+  color: var(--text-primary) !important;
+}
+
+.text-muted {
+  color: var(--text-secondary) !important;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out forwards;
+}

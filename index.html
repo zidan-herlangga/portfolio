@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zidan Herlangga - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- GitHub Calendar CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="min-h-screen p-6 bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]">
+    <div class="container mx-auto max-w-6xl">
+      <!-- Header -->
+      <header
+        class="text-center mb-12 animate-fadeIn"
+        style="animation-delay: 0.1s"
+      >
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 text-[var(--accent)]">
+          Zidan Herlangga
+        </h1>
+        <p class="text-xl text-[var(--text-secondary)]">Coding is the path I walk as a Ninja</p>
+      </header>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <!-- Profile Card -->
+        <div
+          class="card rounded-xl p-6 shadow-lg animate-fadeIn"
+          style="animation-delay: 0.2s"
+        >
+          <div class="flex flex-col items-center">
+            <img
+              src="images/133259343.jpeg"
+              alt="Profile Photo"
+              class="w-32 h-32 rounded-full object-cover border-4 border-[var(--purple)] mb-4"
+            />
+            <h2 class="text-2xl font-bold mb-2">Zidan Herlangga</h2>
+            <p class="text-[var(--text-secondary)] mb-4">Web Dev • Writer • UI Design</p>
+
+            <!-- Social Media -->
+            <div class="flex space-x-4 mb-6">
+              <a
+                href="https://github.com/zidan-herlangga"
+                target="_blank"
+                class="text-[var(--text-primary)] hover:text-[var(--accent)] transition text-2xl"
+                title="GitHub"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+              <a
+                href="#"
+                class="text-[var(--text-primary)] hover:text-[var(--accent)] transition text-2xl"
+                title="LinkedIn (Coming Soon)"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a
+                href="https://x.com/dansec04_"
+                target="_blank"
+                class="text-[var(--text-primary)] hover:text-[var(--accent)] transition text-2xl"
+                title="Twitter"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="text-[var(--text-primary)] hover:text-[var(--accent)] transition text-2xl"
+                title="Instagram (Coming Soon)"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+
+            <p class="text-center">
+              Passionate developer with 3+ years of experience building web
+              applications.
+            </p>
+
+            <button
+              class="btn mt-4 inline-block w-full text-center py-2 rounded-lg transition"
+            >
+              <a href="#!" download="zidanherlangga">Download CV</a>
+            </button>
+          </div>
+        </div>
+
+        <!-- JSON Style Card -->
+        <div
+          class="bg-[var(--bg-secondary)] rounded-xl border border-[rgba(255,255,255,0.1)] shadow-lg overflow-hidden animate-fadeIn"
+          style="animation-delay: 0.3s"
+        >
+          <!-- MacOS Style Title Bar -->
+          <div
+            class="bg-[var(--bg-secondary)] px-4 py-2 flex items-center border-b border-[rgba(255,255,255,0.1)]"
+          >
+            <div class="flex space-x-2 mr-4">
+              <div class="w-3 h-3 rounded-full bg-[var(--red)]"></div>
+              <div class="w-3 h-3 rounded-full bg-[var(--yellow)]"></div>
+              <div class="w-3 h-3 rounded-full bg-[var(--green)]"></div>
+            </div>
+            <div class="text-xs text-[var(--text-secondary)] font-mono">
+              profile.json
+            </div>
+          </div>
+
+          <!-- VS Code Style JSON Content -->
+          <div
+            class="p-4 font-mono text-sm overflow-auto max-h-96 json-container"
+            style="height: 400px"
+          >
+            <div class="text-[var(--text-secondary)] mb-2">// profile.json</div>
+            <div class="text-[var(--text-primary)]">{</div>
+            <div class="ml-4">
+              <div>
+                <span class="text-[var(--purple)]">"developer"</span>: {
+              </div>
+              <div class="ml-4">
+                <div>
+                  <span class="text-[var(--purple)]">"name"</span>:
+                  <span class="text-[var(--green)]">"Zidan Herlangga"</span>,
+                </div>
+                <div>
+                  <span class="text-[var(--purple)]">"age"</span>:
+                  <span class="text-[var(--cyan)]">21</span>,
+                </div>
+                <div>
+                  <span class="text-[var(--purple)]">"location"</span>:
+                  <span class="text-[var(--green)]">"Bekasi, Indonesia"</span>,
+                </div>
+                <div>
+                  <span class="text-[var(--purple)]">"email"</span>:
+                  <span class="text-[var(--green)]"
+                    >"zidanherlangga24@gmail.com"</span
+                  >
+                </div>
+              </div>
+              <div>},</div>
+
+              <div><span class="text-[var(--purple)]">"skills"</span>: [</div>
+              <div class="ml-4">
+                <div><span class="text-[var(--green)]">"Laravel"</span>,</div>
+                <div><span class="text-[var(--green)]">"PHP"</span>,</div>
+                <div><span class="text-[var(--green)]">"WordPress"</span>,</div>
+                <div><span class="text-[var(--green)]">"HTML/CSS"</span>,</div>
+                <div>
+                  <span class="text-[var(--green)]">"JavaScript"</span>,
+                </div>
+                <div><span class="text-[var(--green)]">"Python"</span></div>
+              </div>
+              <div>],</div>
+
+              <div>
+                <span class="text-[var(--purple)]">"experience"</span>: [
+              </div>
+              <div class="ml-4">
+                <div>{</div>
+                <div class="ml-4">
+                  <div>
+                    <span class="text-[var(--purple)]">"company"</span>:
+                    <span class="text-[var(--green)]">"CV. Edith Arkatama"</span
+                    >,
+                  </div>
+                  <div>
+                    <span class="text-[var(--purple)]">"position"</span>:
+                    <span class="text-[var(--green)]"
+                      >"Freelance Developer"</span
+                    >,
+                  </div>
+                  <div>
+                    <span class="text-[var(--purple)]">"years"</span>:
+                    <span class="text-[var(--cyan)]">1</span>
+                  </div>
+                </div>
+                <div>}</div>
+              </div>
+              <div>],</div>
+
+              <div>
+                <span class="text-[var(--purple)]">"education"</span>: {
+              </div>
+              <div class="ml-4">
+                <div>
+                  <span class="text-[var(--purple)]">"degree"</span>:
+                  <span class="text-[var(--green)]">"Computer Science"</span>,
+                </div>
+                <div>
+                  <span class="text-[var(--purple)]">"university"</span>:
+                  <span class="text-[var(--green)]">"BSI University"</span>,
+                </div>
+                <div>
+                  <span class="text-[var(--purple)]">"year"</span>:
+                  <span class="text-[var(--cyan)]">"2022 - Present"</span>
+                </div>
+              </div>
+              <div>}</div>
+            </div>
+            <div class="text-[var(--text-primary)]">}</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects Section -->
+      <section class="mt-12 animate-fadeIn" style="animation-delay: 0.4s">
+        <h2 class="text-3xl font-bold mb-8 text-center text-[var(--accent)]">
+          My Projects
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Project 1 -->
+          <div class="card rounded-xl p-6 shadow-lg">
+            <div
+              class="h-40 bg-[var(--bg-primary)] rounded-lg mb-4 overflow-hidden"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71"
+                alt="Project 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <h3 class="text-xl font-bold mb-2">Company Portfolio</h3>
+            <p class="text-[var(--text-secondary)] mb-4">
+              Modern responsive website built with WordPress for a local
+              business.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tag px-3 py-1 rounded-full text-sm">WordPress</span>
+              <span class="tag px-3 py-1 rounded-full text-sm">PHP</span>
+              <span class="tag px-3 py-1 rounded-full text-sm">Elementor</span>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="card rounded-xl p-6 shadow-lg">
+            <div
+              class="h-40 bg-[var(--bg-primary)] rounded-lg mb-4 overflow-hidden"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d"
+                alt="Project 2"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <h3 class="text-xl font-bold mb-2">E-commerce Site</h3>
+            <p class="text-[var(--text-secondary)] mb-4">
+              Online store built with Laravel and MySQL database.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tag px-3 py-1 rounded-full text-sm">Laravel</span>
+              <span class="tag px-3 py-1 rounded-full text-sm">MySQL</span>
+              <span class="tag px-3 py-1 rounded-full text-sm">Bootstrap</span>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="card rounded-xl p-6 shadow-lg">
+            <div
+              class="h-40 bg-[var(--bg-primary)] rounded-lg mb-4 overflow-hidden"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6"
+                alt="Project 3"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <h3 class="text-xl font-bold mb-2">Task Manager</h3>
+            <p class="text-[var(--text-secondary)] mb-4">
+              Productivity application with drag-and-drop interface.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tag px-3 py-1 rounded-full text-sm">JavaScript</span>
+              <span class="tag px-3 py-1 rounded-full text-sm">HTML/CSS</span>
+              <span class="tag px-3 py-1 rounded-full text-sm"
+                >LocalStorage</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GitHub Stats Section -->
+      <section class="mt-12 animate-fadeIn" style="animation-delay: 0.5s">
+        <h2 class="text-3xl font-bold mb-8 text-center text-[var(--accent)]">
+          GitHub Activity
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Stats Card -->
+          <div id="github-stats" class="card rounded-xl p-6 shadow-lg">
+            <div
+              class="animate-pulse flex flex-col items-center justify-center h-full"
+            >
+              <div class="flex space-x-2">
+                <div
+                  class="w-3 h-3 rounded-full bg-[var(--purple)] animate-bounce"
+                ></div>
+                <div
+                  class="w-3 h-3 rounded-full bg-[var(--green)] animate-bounce"
+                  style="animation-delay: 0.2s"
+                ></div>
+                <div
+                  class="w-3 h-3 rounded-full bg-[var(--cyan)] animate-bounce"
+                  style="animation-delay: 0.4s"
+                ></div>
+              </div>
+              <p class="mt-4 text-[var(--text-secondary)]">
+                Loading GitHub data...
+              </p>
+            </div>
+          </div>
+
+          <!-- Calendar -->
+          <div class="card rounded-xl p-6 shadow-lg">
+            <h3 class="text-xl font-bold mb-4 text-center">
+              Contribution Calendar
+            </h3>
+            <div id="github-graph" class="calendar"></div>
+            <p class="text-center text-[var(--text-secondary)] mt-2 text-sm">
+              Last year contributions
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Article Section -->
+      <!-- Tambahkan section ini setelah bagian GitHub Activity -->
+      <section class="mt-12 animate-fadeIn" style="animation-delay: 0.7s">
+        <h2 class="text-3xl font-bold mb-8 text-center text-[var(--accent)]">
+          My Articles
+        </h2>
+
+        <div
+          id="news-container"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          <div class="card rounded-xl p-6 shadow-lg">
+            <div class="animate-pulse flex flex-col space-y-4">
+              <div class="h-40 bg-[var(--bg-primary)] rounded-lg"></div>
+              <div class="h-4 bg-[var(--bg-primary)] rounded w-3/4"></div>
+              <div class="h-4 bg-[var(--bg-primary)] rounded w-1/2"></div>
+            </div>
+          </div>
+        </div>
+      </section>    
+
+      <!-- Footer -->
+      <footer
+        class="mt-16 text-center text-[var(--text-secondary)] pb-8 animate-fadeIn"
+        style="animation-delay: 0.6s"
+      >
+        <p>© 2025 Zidan Herlangga. All rights reserved.</p>
+        <p class="mt-2 text-sm">Built with ❤️ using Tailwind CSS</p>
+      </footer>
+    </div>
+
+    <!-- GitHub Calendar JS -->
+    <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
