@@ -1,7 +1,13 @@
-import { createContext, useContext, useState } from 'react'
+import { createContext, useContext, useState } from 'react';
 
 const id = {
-  menu: { beranda: 'Beranda', tentang: 'Tentang', keahlian: 'Keahlian', proyek: 'Proyek', kontak: 'Kontak' },
+  menu: {
+    beranda: 'Beranda',
+    tentang: 'Tentang',
+    keahlian: 'Keahlian',
+    proyek: 'Proyek',
+    kontak: 'Kontak',
+  },
   beranda: {
     greeting: 'Halo, saya',
     terminal: 'cat about.md',
@@ -63,15 +69,22 @@ const id = {
   proyek: {
     terminal: 'ls projects/ --list',
     title1: 'Blog Platform',
-    desc1: 'Platform blogging modern dengan Markdown editor, sistem tagging, komentar, dan dashboard penulis. Dibangun dengan arsitektur JAMstack.',
+    desc1:
+      'Platform blogging modern dengan Markdown editor, sistem tagging, komentar, dan dashboard penulis. Dibangun dengan arsitektur JAMstack.',
     title2: 'Wedding Invitation',
-    desc2: 'Undangan pernikahan digital interaktif dengan RSVP online, galeri foto, countdown, dan peta lokasi. Responsif di semua device.',
+    desc2:
+      'Undangan pernikahan digital interaktif dengan RSVP online, galeri foto, countdown, dan peta lokasi. Responsif di semua device.',
     title3: 'Portfolio Company',
-    desc3: 'Company profile website modern dengan animasi smooth, optimasi SEO, dan performa tinggi. Desain yang mencerminkan brand identity.',
+    desc3:
+      'Company profile website modern dengan animasi smooth, optimasi SEO, dan performa tinggi. Desain yang mencerminkan brand identity.',
     title4: 'E-Commerce',
-    desc4: 'Toko online lengkap dengan manajemen produk, keranjang belanja, checkout system, dan integrasi payment gateway.',
+    desc4:
+      'Toko online lengkap dengan manajemen produk, keranjang belanja, checkout system, dan integrasi payment gateway.',
+    title5: 'School Management System',
+    desc5:
+      'Sistem PPDB dengan fitur manajemen pendaftaran, tracking progress, dan tools assessment. Dibangun dengan teknologi web modern.',
     cmd: 'npm run build --all',
-    cmd_suffix: '# 4 proyek siap deploy',
+    cmd_suffix: '# 5 proyek siap deploy',
     build_status: 'Build success',
   },
   kontak: {
@@ -95,12 +108,18 @@ const id = {
     built: 'Built with',
     by: 'Dibuat dengan ❤️ oleh',
   },
-}
+};
 
 const en = {
-  menu: { beranda: 'Home', tentang: 'About', keahlian: 'Skills', proyek: 'Projects', kontak: 'Contact' },
+  menu: {
+    beranda: 'Home',
+    tentang: 'About',
+    keahlian: 'Skills',
+    proyek: 'Projects',
+    kontak: 'Contact',
+  },
   beranda: {
-    greeting: 'Hello, I\'m',
+    greeting: "Hello, I'm",
     terminal: 'cat about.md',
     roles: ['Web Developer', 'UI/UX Designer', 'Problem Solver'],
     desc: 'A Web Developer passionate about building modern web applications with seamless experience and optimal performance.',
@@ -113,11 +132,11 @@ const en = {
   tentang: {
     terminal: 'cat about.json',
     title: 'About Me',
-    p1: 'Hello! I\'m',
+    p1: "Hello! I'm",
     p1b: 'a',
-    p1c: 'currently pursuing a Bachelor\'s in Information Technology at Bina Sarana Informatika University.',
+    p1c: "currently pursuing a Bachelor's in Information Technology at Bina Sarana Informatika University.",
     p2: 'I have a great interest in building modern web applications using',
-    p3: 'I\'m currently actively developing my skills in Frontend & Full-Stack Development, and open to collaboration and',
+    p3: "I'm currently actively developing my skills in Frontend & Full-Stack Development, and open to collaboration and",
     info_nama: 'Name',
     info_lokasi: 'Location',
     info_email: 'Email',
@@ -160,21 +179,28 @@ const en = {
   proyek: {
     terminal: 'ls projects/ --list',
     title1: 'Blog Platform',
-    desc1: 'Modern blogging platform with Markdown editor, tagging system, comments, and author dashboard. Built with JAMstack architecture.',
+    desc1:
+      'Modern blogging platform with Markdown editor, tagging system, comments, and author dashboard. Built with JAMstack architecture.',
     title2: 'Wedding Invitation',
-    desc2: 'Interactive digital wedding invitation with online RSVP, photo gallery, countdown, and location map. Responsive on all devices.',
+    desc2:
+      'Interactive digital wedding invitation with online RSVP, photo gallery, countdown, and location map. Responsive on all devices.',
     title3: 'Portfolio Company',
-    desc3: 'Modern company profile website with smooth animations, SEO optimization, and high performance. Design that reflects brand identity.',
+    desc3:
+      'Modern company profile website with smooth animations, SEO optimization, and high performance. Design that reflects brand identity.',
     title4: 'E-Commerce',
-    desc4: 'Complete online store with product management, shopping cart, checkout system, and payment gateway integration.',
+    desc4:
+      'Complete online store with product management, shopping cart, checkout system, and payment gateway integration.',
+    title5: 'School Management System',
+    desc5:
+      'Interactive learning platform with course management, progress tracking, and assessment tools. Built with modern web technologies.',
     cmd: 'npm run build --all',
-    cmd_suffix: '# 4 projects ready to deploy',
+    cmd_suffix: '# 5 projects ready to deploy',
     build_status: 'Build success',
   },
   kontak: {
     terminal: 'python send_message.py',
     title: 'Contact',
-    desc: 'Have questions, collaboration ideas, or just want to chat? Don\'t hesitate to reach out!',
+    desc: "Have questions, collaboration ideas, or just want to chat? Don't hesitate to reach out!",
     form_name: '--name',
     form_email: '--email',
     form_message: '--message',
@@ -192,40 +218,40 @@ const en = {
     built: 'Built with',
     by: 'Made with ❤️ by',
   },
-}
+};
 
-const translations = { id, en }
+const translations = { id, en };
 
-const LangContext = createContext()
+const LangContext = createContext();
 
 export function LangProvider({ children }) {
   const [lang, setLang] = useState(() => {
-    const saved = localStorage.getItem('portfolio-lang')
-    return saved === 'en' ? 'en' : 'id'
-  })
+    const saved = localStorage.getItem('portfolio-lang');
+    return saved === 'en' ? 'en' : 'id';
+  });
 
   const toggleLang = () => {
     setLang((prev) => {
-      const next = prev === 'id' ? 'en' : 'id'
-      localStorage.setItem('portfolio-lang', next)
-      return next
-    })
-  }
+      const next = prev === 'id' ? 'en' : 'id';
+      localStorage.setItem('portfolio-lang', next);
+      return next;
+    });
+  };
 
   const t = (key) => {
-    const keys = key.split('.')
-    let result = translations[lang]
+    const keys = key.split('.');
+    let result = translations[lang];
     for (const k of keys) {
-      result = result?.[k]
+      result = result?.[k];
     }
-    return result ?? key
-  }
+    return result ?? key;
+  };
 
   return (
     <LangContext.Provider value={{ lang, setLang: toggleLang, t }}>
       {children}
     </LangContext.Provider>
-  )
+  );
 }
 
-export const useLang = () => useContext(LangContext)
+export const useLang = () => useContext(LangContext);

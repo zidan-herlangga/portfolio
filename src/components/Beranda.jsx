@@ -198,7 +198,10 @@ export default function Beranda() {
                   </a>
                   <button
                     onClick={() =>
-                      window.open('https://github.com/zidanherlangga', '_blank')
+                      window.open(
+                        'https://github.com/zidan-herlangga',
+                        '_blank',
+                      )
                     }
                     className="inline-flex items-center gap-1.5 md:gap-2 px-3 md:px-4 py-2 md:py-2.5 border border-mac-border rounded-lg hover:bg-mac-surface hover:border-mac-accent/40 transition-all duration-300 text-xs md:text-sm active:scale-95"
                     aria-label="GitHub"
